@@ -8,7 +8,7 @@ The easiest way to start creating a plugin is to use the [Yeoman generator](http
 
 ### Rules in Plugins
 
-Plugins can expose additional rules for use in ESLint. To do so, the plugin must export a `rules` object containing a key-value mapping of rule ID to rule. The rule ID does not have to follow any naming convention (so it can just be `dollar-sign`, for instance).
+Plugins can expose additional rules for use in ESLint. To do so, the plugin must export a <span class='definition'>`rules` object</span> containing a key-value mapping of <span class='definition'>rule ID</span> to rule. The rule ID does not have to follow any naming convention (so it can just be `dollar-sign`, for instance).
 
 ```js
 module.exports = {
@@ -159,7 +159,7 @@ module.exports = {
 
 ### Configs in Plugins
 
-You can bundle configurations inside a plugin by specifying them under the `configs` key. This can be useful when you want to provide not just code style, but also some custom rules to support it. Multiple configurations are supported per plugin. Note that it is not possible to specify a default configuration for a given plugin and that users must specify in their configuration file when they want to use one.
+You can <span class='important'>bundle configurations inside a plugin</span> by specifying them under the `configs` key. This can be useful when you want to provide not just code style, but also some custom rules to support it. <span class='important'>Multiple configurations are supported per plugin</span>. Note that it is not possible to specify a default configuration for a given plugin and that users must specify in their configuration file when they want to use one.
 
 ```js
 // eslint-plugin-myPlugin
@@ -197,7 +197,7 @@ If the example plugin above were called `eslint-plugin-myPlugin`, the `myConfig`
 
 ```
 
-**Note:** Please note that configuration will not enable any of the plugin's rules by default, and instead should be treated as a standalone config. This means that you must specify your plugin name in the `plugins` array as well as any rules you want to enable that are part of the plugin. Any plugin rules must be prefixed with the short or long plugin name. See [Configuring Plugins](../user-guide/configuring.md#configuring-plugins) for more information.
+**Note:** Please note that <span class='important'>configuration will not enable any of the plugin's rules by default</span>, and instead should be treated as a standalone config. This means that you must specify your plugin name in the `plugins` array as well as any rules you want to enable that are part of the plugin. Any plugin rules must be prefixed with the short or long plugin name. See [Configuring Plugins](../user-guide/configuring.md#configuring-plugins) for more information.
 
 ### Peer Dependency
 
